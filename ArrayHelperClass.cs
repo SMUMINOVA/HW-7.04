@@ -138,7 +138,52 @@ namespace HomeWork8
                 arr = newArr;
                 return x;
             }
-            
+            static int UnShift(ref int[] arr, int x){
+                int[] newArr = new int [arr.Length + 1];
+                for (int i = 0, j = 1; i < arr.Length; i ++, j++){
+                    newArr[j] = arr[i];
+                }
+                newArr[0] = x;
+                arr = newArr;
+                return arr.Length;
+            }
+
+            static int UnShift(ref string[] arr, string x){
+                string[] newArr = new string[arr.Length + 1];
+                for (int i = 0, j = 1; i < arr.Length; i ++, j++){
+                    newArr[j] = arr[i];
+                }
+                newArr[0] = x;
+                arr = newArr;
+                return arr.Length;
+            }
+            static int UnShift(ref double[] arr, double x){
+                double[] newArr = new double [arr.Length + 1];
+                for (int i = 0, j = 1; i < arr.Length; i ++, j++){
+                    newArr[j] = arr[i];
+                }
+                newArr[0] = x;
+                arr = newArr;
+                return arr.Length;
+            }
+            static int UnShift(ref decimal[] arr, decimal x){
+                decimal[] newArr = new decimal[arr.Length + 1];
+                for (int i = 0, j = 1; i < arr.Length; i ++, j++){
+                    newArr[j] = arr[i];
+                }
+                newArr[0] = x;
+                arr = newArr;
+                return arr.Length;
+            }
+            static int UnShift(ref float[] arr, float x){
+                float[] newArr = new float [arr.Length + 1];
+                for (int i = 0, j = 1; i < arr.Length; i ++, j++){
+                    newArr[j] = arr[i];
+                }
+                newArr[0] = x;
+                arr = newArr;
+                return arr.Length;
+            }
         }
     }
 }
