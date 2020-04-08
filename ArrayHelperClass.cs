@@ -1,18 +1,9 @@
 namespace HomeWork8
 {
-    public class ArrayHelperClass
-    {
         static class ArrayHelper{
-            static string Pop(ref string[] arr){
-                string value = arr [arr.Length-1];
-                string[] newArr = new string[arr.Length-1];
-                for (int i = 0; i < newArr.Length; i++){
-                    newArr[i] = arr[i];
-                }
-                arr = newArr;
-                return value;
-            }
-            static int Pop(ref int[] arr){
+            
+            
+            public static int Pop(ref int[] arr){
                 int value = arr [arr.Length-1];
                 int[] newArr = new int[arr.Length-1];
                 for (int i = 0; i < newArr.Length; i++){
@@ -21,7 +12,16 @@ namespace HomeWork8
                 arr = newArr;
                 return value;
             }
-            static double Pop(ref double[] arr){
+            public static string Pop(ref string[] arr){
+                string value = arr [arr.Length-1];
+                string[] newArr = new string[arr.Length-1];
+                for (int i = 0; i < newArr.Length; i++){
+                    newArr[i] = arr[i];
+                }
+                arr = newArr;
+                return value;
+            }
+            public static double Pop(ref double[] arr){
                 double value = arr [arr.Length-1];
                 double[] newArr = new double[arr.Length-1];
                 for (int i = 0; i < newArr.Length; i++){
@@ -30,7 +30,7 @@ namespace HomeWork8
                 arr = newArr;
                 return value;
             }
-            static decimal Pop(ref decimal[] arr){
+            public static decimal Pop(ref decimal[] arr){
                 decimal value = arr [arr.Length-1];
                 decimal[] newArr = new decimal[arr.Length-1];
                 for (int i = 0; i < newArr.Length; i++){
@@ -39,7 +39,7 @@ namespace HomeWork8
                 arr = newArr;
                 return value;
             }
-            static float Pop(ref float[] arr){
+            public static float Pop(ref float[] arr){
                 float value = arr [arr.Length-1];
                 float[] newArr = new float[arr.Length-1];
                 for (int i = 0; i < newArr.Length; i++){
@@ -48,7 +48,7 @@ namespace HomeWork8
                 arr = newArr;
                 return value;
             }
-            static int Push(ref int[] arr, int x){
+            public static int Push(ref int[] arr, int x){
                 int[] newArr = new int [arr.Length + 1];
                 for (int i = 0; i < arr.Length; i ++){
                     newArr[i] = arr[i];
@@ -57,7 +57,7 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
-            static int Push(ref string[] arr, string x){
+            public static int Push(ref string[] arr, string x){
                 string[] newArr = new string[arr.Length + 1];
                 for (int i = 0; i < arr.Length; i ++){
                     newArr[i] = arr[i];
@@ -66,7 +66,7 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
-            static int Push(ref double[] arr, double x){
+            public static int Push(ref double[] arr, double x){
                 double[] newArr = new double [arr.Length + 1];
                 for (int i = 0; i < arr.Length; i ++){
                     newArr[i] = arr[i];
@@ -75,7 +75,7 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
-            static int Push(ref decimal[] arr, decimal x){
+            public static int Push(ref decimal[] arr, decimal x){
                 decimal[] newArr = new decimal [arr.Length + 1];
                 for (int i = 0; i < arr.Length; i ++){
                     newArr[i] = arr[i];
@@ -84,7 +84,7 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
-            static int Push(ref float[] arr, float x){
+            public static int Push(ref float[] arr, float x){
                 float[] newArr = new float [arr.Length + 1];
                 for (int i = 0; i < arr.Length; i ++){
                     newArr[i] = arr[i];
@@ -93,7 +93,7 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
-            static int Shift(ref int[] arr){
+            public static int Shift(ref int[] arr){
                 int[] newArr = new int [arr.Length - 1];
                 for (int i = 1, j = 0; j < newArr.Length; j++, i++){
                     newArr[j] = arr[i];
@@ -102,7 +102,7 @@ namespace HomeWork8
                 arr = newArr;
                 return x;
             }
-            static string Shift(ref string[] arr){
+            public static string Shift(ref string[] arr){
                 string[] newArr = new string[arr.Length - 1];
                 for (int i = 1, j = 0; j < newArr.Length; j++, i++){
                     newArr[j] = arr[i];
@@ -111,7 +111,7 @@ namespace HomeWork8
                 arr = newArr;
                 return x;
             }
-            static double Shift(ref double[] arr){
+            public static double Shift(ref double[] arr){
                 double[] newArr = new double[arr.Length - 1];
                 for (int i = 1, j = 0; j < newArr.Length; j++, i++){
                     newArr[j] = arr[i];
@@ -120,7 +120,7 @@ namespace HomeWork8
                 arr = newArr;
                 return x;
             }
-            static decimal Shift(ref decimal[] arr){
+            public static decimal Shift(ref decimal[] arr){
                 decimal[] newArr = new decimal[arr.Length - 1];
                 for (int i = 1, j = 0; j < newArr.Length; j++, i++){
                     newArr[j] = arr[i];
@@ -129,7 +129,7 @@ namespace HomeWork8
                 arr = newArr;
                 return x;
             }
-            static float Shift(ref float[] arr){
+            public static float Shift(ref float[] arr){
                 float[] newArr = new float [arr.Length - 1];
                 for (int i = 1, j = 0; j < newArr.Length; j++, i++){
                     newArr[j] = arr[i];
@@ -138,7 +138,7 @@ namespace HomeWork8
                 arr = newArr;
                 return x;
             }
-            static int UnShift(ref int[] arr, int x){
+            public static int UnShift(ref int[] arr, int x){
                 int[] newArr = new int [arr.Length + 1];
                 for (int i = 0, j = 1; i < arr.Length; i ++, j++){
                     newArr[j] = arr[i];
@@ -148,7 +148,7 @@ namespace HomeWork8
                 return arr.Length;
             }
 
-            static int UnShift(ref string[] arr, string x){
+           public static int UnShift(ref string[] arr, string x){
                 string[] newArr = new string[arr.Length + 1];
                 for (int i = 0, j = 1; i < arr.Length; i ++, j++){
                     newArr[j] = arr[i];
@@ -157,7 +157,7 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
-            static int UnShift(ref double[] arr, double x){
+            public static int UnShift(ref double[] arr, double x){
                 double[] newArr = new double [arr.Length + 1];
                 for (int i = 0, j = 1; i < arr.Length; i ++, j++){
                     newArr[j] = arr[i];
@@ -166,7 +166,7 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
-            static int UnShift(ref decimal[] arr, decimal x){
+            public static int UnShift(ref decimal[] arr, decimal x){
                 decimal[] newArr = new decimal[arr.Length + 1];
                 for (int i = 0, j = 1; i < arr.Length; i ++, j++){
                     newArr[j] = arr[i];
@@ -175,7 +175,7 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
-            static int UnShift(ref float[] arr, float x){
+            public static int UnShift(ref float[] arr, float x){
                 float[] newArr = new float [arr.Length + 1];
                 for (int i = 0, j = 1; i < arr.Length; i ++, j++){
                     newArr[j] = arr[i];
@@ -186,4 +186,3 @@ namespace HomeWork8
             }
         }
     }
-}
