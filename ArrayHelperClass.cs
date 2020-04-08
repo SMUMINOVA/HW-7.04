@@ -93,6 +93,51 @@ namespace HomeWork8
                 arr = newArr;
                 return arr.Length;
             }
+            static int Shift(ref int[] arr){
+                int[] newArr = new int [arr.Length - 1];
+                for (int i = 1, j = 0; j < newArr.Length; j++, i++){
+                    newArr[j] = arr[i];
+                }
+                int x = arr[0];
+                arr = newArr;
+                return x;
+            }
+            static string Shift(ref string[] arr){
+                string[] newArr = new string[arr.Length - 1];
+                for (int i = 1, j = 0; j < newArr.Length; j++, i++){
+                    newArr[j] = arr[i];
+                }
+                string x = arr[0];
+                arr = newArr;
+                return x;
+            }
+            static double Shift(ref double[] arr){
+                double[] newArr = new double[arr.Length - 1];
+                for (int i = 1, j = 0; j < newArr.Length; j++, i++){
+                    newArr[j] = arr[i];
+                }
+                double x = arr[0];
+                arr = newArr;
+                return x;
+            }
+            static decimal Shift(ref decimal[] arr){
+                decimal[] newArr = new decimal[arr.Length - 1];
+                for (int i = 1, j = 0; j < newArr.Length; j++, i++){
+                    newArr[j] = arr[i];
+                }
+                decimal x = arr[0];
+                arr = newArr;
+                return x;
+            }
+            static float Shift(ref float[] arr){
+                float[] newArr = new float [arr.Length - 1];
+                for (int i = 1, j = 0; j < newArr.Length; j++, i++){
+                    newArr[j] = arr[i];
+                }
+                float x = arr[0];
+                arr = newArr;
+                return x;
+            }
             
         }
     }
